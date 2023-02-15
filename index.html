@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- harbours our csss -->
+    <link rel="stylesheet" href="assets/style/index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcultor</title>
+  </head>
+  <body>
+    <!-- 
+-  add number 0 to 9 
+- add mathematical symbols
+- display output section
+     -->
+    <!--  main container  4 columns 4 rows-->
+    <div>
+        <!--  going to host the target values to calculate  -->
+<!-- give use hint to select to start typing -->
+        <div class="result">
+            <!-- first value
+            second value
+            solution -->
+            <span > 
+           <input type="number" name="number" id="firstNumber">
+            </span>
+            <span id="operator"> - </span>
+            <span  > <input type="number2" name="number2" id="secondNumber"> </span>
+       <span>=</span>
+       <span class="result">0</span>
+        </div>
+      <!--  top row -->
+      <div class="row">
+        <div class="element" id="openBracket">(</div>
+        <div  class="element" id="closeBracket">)</div>
+        <div  class="element" id="modululs">%</div>
+        <div  class="element" id="clear">AC</div>
+      </div>
+      <!--  2nd row -->
+      <div  class="row">
+        <button  class="element" id="seven" onclick="setValue(7)">7</button>
+        <button  class="element" id="eight">8</button>
+        <button  class="element" id="ninr">9</button>
+        <div  class="element" id="divide">/</div>
+      </div>
+    </div>
+    <!--  3rd Row -->
+    <div  class="row">
+      <div  class="element">4</div>
+      <div class="element">5</div>
+      <div  class="element">6</div>
+      <div  class="element" id="multiplication"  onclick="setOperator('x')">x</div>
+    </div>
+    <!--  4th row -->
+    <div  class="row">
+      <div  class="element">1</div>
+      <div  class="element">2</div>
+      <div  class="element">3</div>
+      <div  class="element" onclick="setOperator('-')">-</div>
+    </div>
+    <!--  5th row -->
+    <div  class="row">
+      <div   class="element">0</div>
+      <div   class="element">.</div>
+      <div   class="element" id="calculate">=</div>
+      <div   class="element" id="addValues"  onclick="setOperator('+')">+</div>
+    </div>
+    <!-- js script tag -->
+    <script src="assets/script/index.js"></script>
+  </body>
+</html>
